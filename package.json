@@ -1,0 +1,27 @@
+{
+  "name": "facebook-login-with-long-lived-page-access-token",
+  "version": "0.0.1",
+  "description": "Facebook client-side login that then extends user access token and gets page access token.  https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidgailey/facebook-login-with-long-lived-page-access-token.git"
+  },
+  "author": "David Gailey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidgailey/facebook-login-with-long-lived-page-access-token/issues"
+  },
+  "homepage": "https://github.com/davidgailey/facebook-login-with-long-lived-page-access-token#readme",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.3"
+  }
+
+}
