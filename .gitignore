@@ -39,4 +39,5 @@ jspm_packages
 # Local development
 *.env
 *.dev
+configuration/*.js
 .DS_Store
