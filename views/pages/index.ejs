@@ -5,15 +5,35 @@
 </head>
 
 <body>
+    <!-- include facebook js sdk here to start async loading 
+         https://developers.facebook.com/docs/javascript/quickstart 
+    -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '<%= config.facebook_api_key %>',
+          xfbml      : true,
+          version    : '<%= config.version %>'
+        });
+      };
 
-  <% include ../partials/nav.ejs %>
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    <% include ../partials/nav.ejs %>
 
 <div class="jumbotron text-center">
   <div class="container">
     
-    <h1>All Captured in a Flash</h1>
-    <p> Photography</p>
-    <a type="button" class="tele-button btn btn-lg btn-default" href="tel:1-814-317-5377"><span class="glyphicon glyphicon-phone-alt"></span>Call Now!</a>
+    <h1>Facebook Login with Long-lived Page Access Token</h1>
+    <a type="button" class="tele-button btn btn-lg btn-default" href="tel:1-814-317-5377"><span class="glyphicon glyphicon-phone-alt"></span>take action</a>
 
 
   </div>
